@@ -1,0 +1,25 @@
+name: Copy File to Blog Repo
+
+on: 
+    push:
+        branches:
+            - main
+
+jobs:
+  copy-file:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v3
+
+    - name: Pushes test file
+      uses: dmnemec/copy_file_to_another_repo_action@main
+      env:
+        API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
+      with:
+        source_file: 'test2.md'
+        destination_repo: 'devopenlibrary/CS-Study-Blog'
+        destination_folder: '_posts'
+        user_email: 'hyunjae1995@gmail.com'
+        user_name: 'hyunjae oh'
+        commit_message: 'move file test'
