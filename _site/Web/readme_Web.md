@@ -1,0 +1,12 @@
+# 웹
+- RESTful API
+- JWT 토큰
+- Web Server & WAS
+- Sync / Async
+- Blocking / Non-Blocking
+- OAuth
+- CDN
+- SEO
+- GraphQL
+- SSR 과 CSR
+- CSRF

@@ -1,2 +1,32 @@
-title: "My CS Study"
-theme: minima
+title: Dev Open Library # the main title
+remote_theme: just-the-docs/just-the-docs
+lang: en
+timezone: Asia/Seoul
+minimal_mistakes_skin: "default" # 원하는 스킨 선택 (air, aqua, contrast, dark, dirt, neon, mint, plum, sunrise)
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
+  - jekyll-gist
+  - jekyll-paginate-v2
+  - jekyll-remote-theme
+  - jekyll-include-cache
+
+include:
+  - ../_config.yml
+
+tagline: 개발과 관련된 지식을 자유롭게 공유하고 보관하는 장소입니다. # it will display as the subtitle
+
+description: >- # used by seo meta and the atom feed
+  A minimal, responsive and feature-rich Jekyll theme for technical writing.
+
+collections:
+  algorithm:
+    output: true
+    permalink: /Algorithm/:path/
+  datastructure:
+    output: true
+    permalink: /Data Structure/:path/
+
+
+markdown: kramdown
+highlighter: rouge
