@@ -1,17 +1,16 @@
 # 알고리즘
-- 순열 & 조합
-- 최대공약수 & 최소공배수
-- 스택 & 큐
-- 힙
-- 해싱
-- 분할 정복
+- [순열 & 조합](./ag_permutation_combination.md)
+- [최대공약수 & 최소공배수](./ag_gcd_lcm.md)
+- [스택 & 큐](./ag_stack_queue.md)
+- [힙](./ag_heap.md)
+- [해싱](./ag_hashing.md)
+- [분할 정복](./ag_divide_and_conquer.md)
 - 정렬
-    - Quick Sort, Merge Sort, Heap Sort
-- DFS & BFS
-- 이분 탐색
-- 그리디
-- 구현
-- DP
-  - LIS, LCA
-- 다익스트라(Dijkstra)
-- 비트마스크
+    - [Quick Sort](./ag_quick_sort.md), [Merge Sort](./ag_merge_sort.md), [Heap Sort](./ag_heap_sort.md)
+- [DFS & BFS](./ag_dfs_bfs.md)
+- [이분 탐색](./ag_binary_search.md)
+- [그리디](./ag_greedy.md)
+- [구현](./ag_implementation.md)
+- [DP](./ag_dp.md)
+- [다익스트라(Dijkstra)](./ag_dijkstra.md)
+- [비트마스크](./ag_bitMask.md)
