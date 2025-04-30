@@ -1,14 +1,11 @@
 # 운영체제
-- 컴퓨터 구조 & 운영체제
-- 메모리
-    - 물리 메모리 & 가상 메모리 & 페이징
-- 프로세스 & 스레드
-    - 프로세스
-    - PCB & Context Switching
-    - 멀티프로세싱
-    - 스레드 & 멀티스레딩
-    - 공유 자원 & 임계 영역(Semaphore & Mutex)
-    - 교착상태(Deadlock)
-- CPU Scheduling
-    - 선점 & 비선점
-- Blocking, Non-Blocking & Synchronous & Asynchronous
+- [컴퓨터 구조 & 운영체제](./os_com_and_operating_system.md)
+- [메모리](./os_memory.md)
+- [프로세스](./os_process.md)
+- [스래드](./os_thread.md)
+- [PCB & Context Switching](./os_pcb_and_context_switch.md)
+- [멀티프로세싱](./os_multi_processing.md)
+- [공유 자원 & 임계 영역(Semaphore & Mutex)](./os_mutex_semaphore.md)
+- [교착상태(Deadlock)](./os_deadlock.md)
+- [CPU Scheduling](./os_cpu_scheduling.md)
+- [Blocking, Non-Blocking & Synchronous & Asynchronous](./os_Blocking_Non-Blocking_Synchronous_Asynchronous.md)

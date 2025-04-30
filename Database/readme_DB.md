@@ -1,18 +1,15 @@
 # 데이터베이스
-- 데이터베이스 기초
-- ERD & 정규화
-- 트랜잭션 & 무결성
-- 데이터베이스의 종류
-    - RDBS & NoSQL(MySQL, PostgreSQL, Redis, MongoDB 등 예시 활용)
-- 인덱스
-    - B-Tree
-- 조인
-    - 종류, 원리
-- 분산 데이터베이스의 개념
-- Event Sourcing & CQRS
-- 백업과 복구(Backup & Recovery)
-- 데이터 마이그레이션 전략
-- 실행 계획(EXPLAIN) 분석
-- Query Optimization (Slow Query Tuning)
-- 파티셔닝(Partitioning)과 샤딩(Sharding)
-- 캐싱
+- [데이터베이스 기초](./db_basic.md)
+- [정규화](./db_normal_forms.md)
+- [트랜잭션 & 무결성](./db_transaction.md)
+- [데이터베이스의 종류](./db_types_of_databases.md)
+- [인덱스](./db_index.md)
+- [조인](./db_join.md)
+- [분산 데이터베이스의 개념](./db_distributed_database.md)
+- [Event Sourcing & CQRS](./db_event_sourcing_cqrs.md)
+- [백업과 복구(Backup & Recovery)](./db_backup_recovery.md)
+- [데이터 마이그레이션 전략](./db_migration.md)
+- [실행 계획(EXPLAIN) 분석](./db_explain.md)
+- [Query Optimization (Slow Query Tuning)](./db_query_optimization.md)
+- [파티셔닝(Partitioning)과 샤딩(Sharding)](./db_partitioning_sharding.md)
+- [캐싱](./db_cache.md)
