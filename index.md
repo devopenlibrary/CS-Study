@@ -12,9 +12,9 @@ nav_order: 1
 ## 목차
 
 - [Algorithm](Algorithm/readme_AG.md)
-- [Data Structure](Data%20Structure/readme_DS.md)
+- [Data Structure](Data_Structure/readme_DS.md)
 - [Database](Database/readme_DB.md)
-- [Design Pattern](Design%20Pattern/readme_DP.md)
+- [Design Pattern](Design_Pattern/readme_DP.md)
 - [Network](Network/readme_NW.md)
 - [OS](OS/readme_OS.md)
 - [Web](Web/readme_Web.md)
