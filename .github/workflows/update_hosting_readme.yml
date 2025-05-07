@@ -23,7 +23,7 @@ jobs:
         id: files
         run: |
           PR_NUMBER=${{ github.event.pull_request.number }}
-          gh pr view $PR_NUMBER --json files -q '.files[].path' > files.txt
+          gh pr view $PR_NUMBER --json files -q '.files[].path' > /tmp/files.txt
         env:
           GH_TOKEN: ${{ secrets.API_TOKEN_GITHUB }}
 
@@ -34,6 +34,7 @@ jobs:
 
       - name: Run update-readmes.sh
         run: bash bash/update-readmes.sh
+             rm -f /tmp/files.txt
         env:
           GITHUB_REPOSITORY: ${{ github.repository }}
 
