@@ -5,7 +5,9 @@ while read file; do
   # md 파일만 처리
   if [[ "$file" == *.md ]]; then
     # 첫 번째 # 헤더 추출 (파일 인코딩 UTF-8 가정)
-    title=$(grep -m 1 '^# ' "$file" | sed 's/^# //')
+    echo "Grep result:"
+    grep -m 1 '^# ' "$file"
+    title=$(grep -m 1 '^# ' "$file")
     # 타이틀이 없으면 파일명 사용
     [ -z "$title" ]
     # 링크 생성
