@@ -33,7 +33,7 @@ jobs:
           git checkout hosting
 
       - name: Run update-readmes.sh
-        run: bash ./bash/update-readmes.sh
+        run: bash bash/update-readmes.sh
         env:
           GITHUB_REPOSITORY: ${{ github.repository }}
 
