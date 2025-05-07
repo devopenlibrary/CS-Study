@@ -15,3 +15,4 @@
 - [다익스트라(Dijkstra)](./ag_dijkstra.md)
 - [비트마스크](./ag_bitMask.md)- [ag_test5.md](./ag_test5.md)
 - [ag_test6.md](./ag_test6.md)
+- [ag_test7.md](./ag_test7.md)
