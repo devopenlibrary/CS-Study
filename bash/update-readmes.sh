@@ -20,4 +20,4 @@ while read file; do
     # 이미 해당 타이틀이 기록되어 있지 않으면 추가
     grep -q "$title" "$readme" || echo "- [$title]($link)" >> "$readme"
   fi
-done < files.txt
+done < /tmp/files.txt
