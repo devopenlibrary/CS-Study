@@ -4,11 +4,10 @@
 while read file; do
   # md 파일만 처리
   if [[ "$file" == *.md ]]; then
+    filename=$(basename "$file")
     # 첫 번째 # 헤더 추출
-    title=$(grep -m 1 '^# ' "$file" | sed 's/^# //')
+    title=$(grep -m 1 '^# ' "$filename" | sed 's/^# //')
     # 타이틀이 없으면 파일명 사용
-    echo "Grep result:"
-    grep -m 1 '^# ' "$file"
     [ -z "$title" ] && title=$(basename "$file")
     # 파일이 속한 디렉토리명 추출
     dir=$(dirname "$file")
@@ -20,8 +19,6 @@ while read file; do
       readme="$dir/readme_${dirname_only}.md"
       touch "$readme"
     fi
-    # 파일명만 추출 (경로 제외)
-    filename=$(basename "$file")
     # 상대 경로 링크 생성
     link="./$filename"
     # 이미 해당 타이틀이 기록되어 있지 않으면 추가
