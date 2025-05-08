@@ -32,6 +32,15 @@ jobs:
           git fetch origin hosting
           git checkout hosting
 
+      - name: Merge main branch changes to hosting
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git merge origin/main --no-edit
+          git checkout --theirs . || true
+          git add . || true
+          git merge --continue || true
+
       - name: Run update-readmes.sh
         run: bash bash/update-readmes.sh
              rm -f /tmp/files.txt
