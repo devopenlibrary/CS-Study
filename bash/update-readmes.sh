@@ -6,7 +6,7 @@ while read file; do
   if [[ "$file" == *.md ]]; then
     filename=$(basename "$file")
     # 첫 번째 # 헤더 추출
-    title=$(grep -m 1 '^# ' "$filename" | sed 's/^# //')
+    title=$(grep -m 1 '^# ' "$file" | sed 's/^# //')
     # 타이틀이 없으면 파일명 사용
     [ -z "$title" ] && title=$(basename "$file")
     # 파일이 속한 디렉토리명 추출
