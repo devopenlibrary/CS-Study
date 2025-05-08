@@ -1,0 +1,56 @@
+name: Update hosting branch on main merge
+
+on:
+  pull_request:
+    types: [closed]
+    branches:
+      - main
+
+jobs:
+  update-hosting:
+    if: github.event.pull_request.merged == true
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout main branch
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+
+      - name: Set up GitHub CLI
+        run: sudo apt-get install gh
+
+      - name: Get changed files
+        id: files
+        run: |
+          PR_NUMBER=${{ github.event.pull_request.number }}
+          gh pr view $PR_NUMBER --json files -q '.files[].path' > /tmp/files.txt
+        env:
+          GH_TOKEN: ${{ secrets.API_TOKEN_GITHUB }}
+
+      - name: Fetch hosting branch
+        run: |
+          git fetch origin hosting
+          git checkout hosting
+
+      - name: Merge main branch changes to hosting
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git merge origin/main --no-edit
+          git checkout --theirs . || true
+          git add . || true
+          git merge --continue || true
+
+      - name: Run update-readmes.sh
+        run: bash bash/update-readmes.sh
+             rm -f /tmp/files.txt
+        env:
+          GITHUB_REPOSITORY: ${{ github.repository }}
+
+      - name: Commit and push changes
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add .
+          git commit -m "Update READMEs with new files from PR #${{ github.event.pull_request.number }}" || echo "No changes to commit"
+          git push origin hosting
