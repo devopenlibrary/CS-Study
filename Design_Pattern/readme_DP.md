@@ -9,3 +9,4 @@
 - [MVC 패턴](./dp_mvc_pattern.md)
 - [MVP 패턴](./dp_mvp_pattern.md)
 - [MVVM 패턴](./dp_mvvm_pattern.md)
+- [Adapter Pattern](./dp_adapter_pattern.md)
